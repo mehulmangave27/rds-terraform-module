@@ -1,0 +1,31 @@
+module "db" {
+  source                     = "../"
+  identifier_count           = var.identifier_count
+  region                     = var.region
+  application_code           = var.application_code
+  environment                = var.tags["Environment"]
+  engine                     = var.engine
+  engine_version             = var.engine_version
+  instance_class             = var.instance_class
+  allocated_storage          = var.allocated_storage
+  max_allocated_storage      = var.max_allocated_storage
+  db_name                    = ""
+  vpc_security_group_ids     = var.vpc_security_group_ids
+  db_subnet_group_name       = var.db_subnet_group_name
+  parameter_group_name       = var.parameter_group_name
+  create_parameter_group     = var.create_parameter_group
+  parameter_group_family     = var.parameter_group_family
+  parameter_group_parameters = var.parameter_group_parameters
+  option_group_name          = var.option_group_name
+  create_option_group        = var.create_option_group
+  major_engine_version       = var.major_engine_version
+  options                    = var.options
+  kms_key_id                 = var.kms_key_id
+  multi_az                   = var.multi_az
+  snapshot_identifier        = var.snapshot_identifier
+  backup_window              = null
+  character_set_name         = var.character_set_name
+  deletion_protection        = var.deletion_protection
+  tags                       = var.tags
+  master_username            = var.master_username ## use this attributes only during the time of upgrade
+}
